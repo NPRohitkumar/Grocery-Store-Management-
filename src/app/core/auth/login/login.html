@@ -1,0 +1,41 @@
+<div class="auth-container">
+  <mat-card class="login-card" appearance="outlined">
+    <mat-card-header>
+      <mat-card-subtitle class="welcome-text">WELCOME TO THE</mat-card-subtitle>
+      <mat-card-title class="title">GROCERY STORE<br>
+        <span>MANAGEMENT SYSTEM</span></mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="description">
+      <p>
+        Streamline inventory, track orders, manage suppliers, and enhance store
+        operations—all in one place. Log in to keep everything running smoothly.
+      </p>
+    </mat-card-content>
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+        <p class="welcome-text">ACCOUNT SIGN IN</p>
+
+        <label for="username">Username</label>
+        <mat-form-field appearance="outline" class="form-style">
+          <!-- <mat-label>Username</mat-label> -->
+          <input matInput placeholder="Enter your username" id="username" formControlName="username">
+        </mat-form-field>
+
+        <label for="password">Password</label>
+        <mat-form-field appearance="outline" class="form-style">
+          <!-- <mat-label> Password</mat-label> -->
+          <input matInput placeholder="Enter the password" id="password" formControlName="password">
+          <mat-error *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+            Password is required
+          </mat-error>
+        </mat-form-field>
+        <mat-card-actions class="signIn">
+          <span>Don't have an account?&nbsp;&nbsp;<strong>Sign Up</strong></span>
+          <button [disabled]="loginForm.invalid">Sign in</button>
+        </mat-card-actions>
+      </form>
+    </mat-card-content>
+
+
+  </mat-card>
+</div>
