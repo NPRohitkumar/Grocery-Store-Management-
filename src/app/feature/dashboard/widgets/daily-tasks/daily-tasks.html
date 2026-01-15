@@ -1,0 +1,31 @@
+<mat-card class="widget-card">
+
+  <div class="widget-header">
+    <h3>My Daily Tasks</h3>
+
+    <button mat-button [matMenuTriggerFor]="menu">
+      Filter <fa-icon [icon]="faArrowDown"></fa-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="setFilter('popular')">Most Popular</button>
+      <button mat-menu-item (click)="setFilter('low to high')">Low to High</button>
+      <button mat-menu-item (click)="setFilter('high to low')">High to Low</button>
+      <button mat-menu-item (click)="setFilter('top rated')">Top Rated</button>
+    </mat-menu>
+  </div>
+
+  <mat-tab-group>
+    <mat-tab label="Online" (click)="setTab('online')"></mat-tab>
+    <mat-tab label="Offline" (click)="setTab('offline')"></mat-tab>
+  </mat-tab-group>
+
+  <app-chart
+    [datasets]="datasets"
+    [labels]="labels"
+    [isDonut]="true"
+    [centerText]="total"
+    [showPercentage]="true">
+  </app-chart>
+
+</mat-card>

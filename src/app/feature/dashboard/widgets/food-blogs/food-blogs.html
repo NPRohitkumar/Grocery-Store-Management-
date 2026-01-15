@@ -1,0 +1,19 @@
+<mat-card class="widget-card">
+
+  <div class="widget-header">
+    <h3>Food Safety Blogs</h3>
+    <a class="view-link">View All</a>
+  </div>
+
+  <div class="blog-list">
+    <div class="blog" *ngFor="let blog of blogs">
+      <img src="{{blog.image}}" alt="">
+      <div class="food-blog-content">
+        <p>{{blog.date}}</p>
+        <h4>{{ blog.title }}</h4>
+        <p>{{ blog.summary }}</p>
+      </div>
+    </div>
+  </div>
+
+</mat-card>

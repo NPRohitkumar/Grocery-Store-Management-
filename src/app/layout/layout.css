@@ -1,0 +1,26 @@
+.app-layout {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  grid-template-rows: 55px 1fr;
+  grid-template-areas:
+    "sidebar header"
+    "sidebar content";
+  height: 100vh;
+  /* position: sticky;
+  top: 0; */
+}
+
+/* Grid areas */
+.sidebar-area {
+  grid-area: sidebar;
+}
+
+.header-area {
+  grid-area: header;
+}
+
+.content-area {
+  grid-area: content;
+  background: #f5f7fb;
+  overflow-y: auto;
+}

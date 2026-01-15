@@ -1,0 +1,22 @@
+.dashboard-grid {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-template-rows: repeat(2,1fr);
+  gap: 15px;
+  margin: 10px;
+  padding: 10px;
+}
+
+.hello-tag{
+  margin-left: 20px;
+  font-size: large;
+  font-weight: 500;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}

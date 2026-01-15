@@ -1,0 +1,16 @@
+<mat-card class="widget-card">
+
+  <div class="widget-header">
+    <h3>Shipment Statistics</h3>
+    <a class="view-all">View All</a>
+  </div>
+
+  <app-chart
+    [labels]="labels"
+    [datasets]="datasets"
+    [isDonut]="true"
+    [showPercentage]="true"
+    [centerText]="total">
+  </app-chart>
+
+</mat-card>

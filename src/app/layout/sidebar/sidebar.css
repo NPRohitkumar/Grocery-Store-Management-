@@ -1,0 +1,53 @@
+.sidebar {
+  height: 100vh;
+  background: #e3e5ee;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Brand */
+.brand {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  font-size: 24px;
+  position: relative;
+  top: 8px;
+}
+
+.title {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Menu */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  padding: 10px 14px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Active */
+.menu li.active {
+  background: #3f51b5;
+  border-radius: 20px;
+  color: white;
+}
+
+/* 🔑 MAGIC LINE */
+.bottom-menu {
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid #babcc6;
+}

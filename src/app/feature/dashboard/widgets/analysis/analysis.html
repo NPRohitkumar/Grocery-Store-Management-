@@ -1,0 +1,24 @@
+<mat-card class="widget-card">
+
+  <div class="widget-header">
+    <h3>Analysis</h3>
+
+    <button mat-button [matMenuTriggerFor]="menu">
+      Sort By {{ period | titlecase }}
+      <fa-icon [icon]="faArrowDown"></fa-icon>
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="changePeriod('weekly')">Weekly</button>
+      <button mat-menu-item (click)="changePeriod('monthly')">Monthly</button>
+      <button mat-menu-item (click)="changePeriod('yearly')">Yearly</button>
+    </mat-menu>
+  </div>
+
+  <app-chart
+    [labels]="labels"
+    [datasets]="datasets">
+  </app-chart>
+
+</mat-card>
+
