@@ -6,6 +6,7 @@ import { Layout } from './layout/layout';
 
 export const routes: Routes = [
     { path: 'login', component: Login },
+    { path: '', redirectTo: 'login', pathMatch: 'full' },
     {
         path: '',
         component: Layout,
@@ -13,8 +14,7 @@ export const routes: Routes = [
         children: [
             { path: 'dashboard', component: Dashboard }
         ]
-    },
-    { path: '', redirectTo: 'login', pathMatch: 'full' }
+    }
 ];
 
 

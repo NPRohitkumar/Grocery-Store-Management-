@@ -21,10 +21,7 @@ import { Auth } from '../../services/auth';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Login {
-  loginForm: any;
-  // temporary hardcoded credentials
-  private readonly validUsername = 'admin';
-  private readonly validPassword = 'admin123';
+  loginForm:any;
 
   constructor(
     private fb: FormBuilder , 
@@ -40,11 +37,9 @@ export class Login {
     let {username , password} = this.loginForm.value;
     const success = this.authService.login(username,password);
     if(success){
-      console.log("user successfully verified");
       this.router.navigate(["/dashboard"]);
     } else{
       alert("Invalid credentials , please retry!");
     }
-    console.log(this.loginForm.value.username , this.loginForm.value.password);
   }
 }
